@@ -75,7 +75,7 @@ updates:
 ```sh
 curl -fsSL https://deepthinker2001.github.io/cosmic-ext-dimmer/key.gpg \
   | sudo gpg --dearmor -o /usr/share/keyrings/cosmic-ext-dimmer.gpg
-echo "deb [signed-by=/usr/share/keyrings/cosmic-ext-dimmer.gpg] https://deepthinker2001.github.io/cosmic-ext-dimmer stable main" \
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cosmic-ext-dimmer.gpg] https://deepthinker2001.github.io/cosmic-ext-dimmer stable main" \
   | sudo tee /etc/apt/sources.list.d/cosmic-ext-dimmer.list
 sudo apt update
 sudo apt install cosmic-ext-dimmer
@@ -95,7 +95,7 @@ apt removes the old one:
 ```sh
 sudo rm /etc/apt/sources.list.d/cosmic-dimmer.list
 sudo mv /usr/share/keyrings/cosmic-dimmer.gpg /usr/share/keyrings/cosmic-ext-dimmer.gpg
-echo "deb [signed-by=/usr/share/keyrings/cosmic-ext-dimmer.gpg] https://deepthinker2001.github.io/cosmic-ext-dimmer stable main" \
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cosmic-ext-dimmer.gpg] https://deepthinker2001.github.io/cosmic-ext-dimmer stable main" \
   | sudo tee /etc/apt/sources.list.d/cosmic-ext-dimmer.list
 sudo apt update
 sudo apt install cosmic-ext-dimmer
